@@ -281,8 +281,8 @@ export default function Nav() {
                 <div className="grid grid-cols-3 gap-3">
                   {activeItem.mega.products.slice(0, 3).map((p) => (
                     <Link key={p.slug} href={`/products/${p.slug}`} onClick={closeNow} className="group block">
-                      <div className="relative aspect-[4/5] bg-warm overflow-hidden grain">
-                        <Image src={p.image} alt={p.name} fill sizes="(max-width: 768px) 33vw, 15vw" className="object-contain p-[12%] transition-transform duration-500 group-hover:scale-[1.04]" />
+                      <div className="relative aspect-[4/5] bg-white overflow-hidden">
+                        <Image src={p.image} alt={p.name} fill sizes="(max-width: 768px) 33vw, 15vw" className="object-contain p-[10%] transition-transform duration-500 group-hover:scale-[1.04]" />
                       </div>
                       <p className="display text-[11px] mt-2.5">{p.name}</p>
                       <p className="text-[11px] text-textdim mt-0.5">{p.price}</p>
