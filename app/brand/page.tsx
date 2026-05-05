@@ -58,7 +58,7 @@ export default function Page() {
         eyebrow="The Brand"
         title="SIMPL UV"
         subtitle="Performance golf apparel built around UV protection, movement, and refined minimalism. Nothing extra. Everything intentional."
-        banner="/images/hero-editorial.png"
+        banner="/images/brand-hero.png"
       />
 
       {/* Mission */}
