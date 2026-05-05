@@ -122,8 +122,8 @@ const navItems: NavItem[] = [
   { label: "Brand", href: "/brand" },
 ];
 
-const LOGO_ROW_H = 52;   // height of logo row in px
-const MENU_ROW_H = 50;   // height of menu row in px
+const LOGO_ROW_H = 44;   // height of logo row in px
+const MENU_ROW_H = 46;   // height of menu row in px
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -166,7 +166,7 @@ export default function Nav() {
               width={170}
               height={50}
               priority
-              className="h-5 w-auto"
+              className="h-6 w-auto"
               style={{ filter: "brightness(0)" }}
             />
           </Link>

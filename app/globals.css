@@ -2,17 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global grain — subtle film texture over imagery */
+/*
+ * Global grain controls
+ *
+ *   --grain-opacity   how strong the grain reads (0 = off, 1 = max)
+ *   --grain-size      tile size of the noise pattern in px
+ *   --grain-blend     CSS mix-blend-mode (overlay / soft-light / multiply)
+ *
+ * Tune any of these in :root to apply across the entire site.
+ */
+:root {
+  --grain-opacity: 0.42;
+  --grain-size: 180px;
+  --grain-blend: overlay;
+}
+
 .grain::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.18;
-  mix-blend-mode: overlay;
   z-index: 1;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  background-size: 240px 240px;
+  opacity: var(--grain-opacity);
+  mix-blend-mode: var(--grain-blend);
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: var(--grain-size) var(--grain-size);
 }
 
 @layer base {
@@ -29,12 +43,12 @@
     @apply bg-white text-ink antialiased;
     font-feature-settings: "kern", "liga";
     overflow-x: hidden;
-    /* Push first-page content below the fixed nav (logo 52 + menu 50 = 102) */
-    padding-top: 52px;
+    /* Push first-page content below the fixed nav (logo 44 + menu 46 = 90) */
+    padding-top: 44px;
   }
   /* On the home page, only push down by logo row so menu row floats over hero. */
-  body.has-hero { padding-top: 52px; }
-  body:not(.has-hero) { padding-top: 102px; }
+  body.has-hero { padding-top: 44px; }
+  body:not(.has-hero) { padding-top: 90px; }
 
   ::selection {
     @apply bg-ink text-white;
