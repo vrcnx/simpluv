@@ -124,7 +124,9 @@ export default function Page() {
       {/* Logo */}
       <section className="py-[clamp(48px,6vw,96px)] bg-white print-page-break">
         <div className="gutter mx-auto max-w-[1440px]">
-          <p className="label text-textdim mb-8">Logo System</p>
+          <p className="label text-textdim mb-3">Logo System</p>
+          <h2 className="display text-[clamp(22px,2.6vw,32px)] mb-8">Primary  /  Wordmark</h2>
+
           <div className="grid md:grid-cols-3 gap-2">
             <div className="aspect-[3/2] bg-warm grid place-items-center">
               <Image src="/logo/simpl-uv.svg" alt="SIMPL UV" width={220} height={64} className="h-10 w-auto" style={{ filter: "brightness(0)" }} />
@@ -136,10 +138,35 @@ export default function Page() {
               <Image src="/logo/simpl-uv.svg" alt="SIMPL UV on sky" width={220} height={64} className="h-10 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
             </div>
           </div>
+          <div className="grid md:grid-cols-3 gap-2 mt-2 mb-12">
+            <p className="label text-textdim text-center">Light backgrounds</p>
+            <p className="label text-textdim text-center">Dark backgrounds</p>
+            <p className="label text-textdim text-center">Brand blue</p>
+          </div>
+
+          {/* Secondary mark */}
+          <h2 className="display text-[clamp(22px,2.6vw,32px)] mb-3">Secondary  /  Mark</h2>
+          <p className="text-[14px] text-textmid max-w-[60ch] mb-8 leading-[1.55]">
+            A more compact monogram for tight applications — favicons, hangtags,
+            embroidery, social avatars, and product detailing where the full
+            wordmark won&apos;t breathe.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-2">
+            <div className="aspect-[3/2] bg-warm grid place-items-center">
+              <Image src="/logo/simpl-uv-mark.svg" alt="SIMPL UV mark" width={140} height={80} className="h-16 w-auto" style={{ filter: "brightness(0)" }} />
+            </div>
+            <div className="aspect-[3/2] bg-ink grid place-items-center">
+              <Image src="/logo/simpl-uv-mark.svg" alt="SIMPL UV mark reversed" width={140} height={80} className="h-16 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
+            </div>
+            <div className="aspect-[3/2] bg-sky grid place-items-center">
+              <Image src="/logo/simpl-uv-mark.svg" alt="SIMPL UV mark on sky" width={140} height={80} className="h-16 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
+            </div>
+          </div>
           <div className="grid md:grid-cols-3 gap-2 mt-2">
-            <p className="label text-textdim text-center">Primary  /  Light backgrounds</p>
-            <p className="label text-textdim text-center">Reversed  /  Dark backgrounds</p>
-            <p className="label text-textdim text-center">Brand Blue  /  Alternate</p>
+            <p className="label text-textdim text-center">Light backgrounds</p>
+            <p className="label text-textdim text-center">Dark backgrounds</p>
+            <p className="label text-textdim text-center">Brand blue</p>
           </div>
         </div>
       </section>
