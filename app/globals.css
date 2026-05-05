@@ -12,7 +12,7 @@
  * Tune any of these in :root to apply across the entire site.
  */
 :root {
-  --grain-opacity: 0.42;
+  --grain-opacity: 0.7;
   --grain-size: 180px;
   --grain-blend: overlay;
 }
