@@ -46,17 +46,17 @@ export default function ProductView({ product }: { product: Product }) {
         </div>
       </section>
 
-      {/* Main — full width */}
+      {/* Main — gallery 30% / info 70% on desktop, capped for ultrawide */}
       <section className="bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-0 md:gap-10 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-[30%_70%] gap-0 md:gap-10 lg:gap-16">
           {/* Gallery */}
-          <div>
+          <div className="md:max-w-[560px] md:w-full">
             <div className="relative aspect-[4/5] bg-warm grain overflow-hidden">
               <Image
                 src={gallery[activeImg]}
                 alt={product.name}
                 fill
-                sizes="(max-width: 768px) 100vw, 60vw"
+                sizes="(max-width: 768px) 100vw, 30vw"
                 priority
                 className="object-cover transition-opacity duration-300"
               />
@@ -76,7 +76,7 @@ export default function ProductView({ product }: { product: Product }) {
                     src={src}
                     alt=""
                     fill
-                    sizes="50vw"
+                    sizes="(max-width: 768px) 50vw, 15vw"
                     className={i === 1 ? "object-contain p-[14%]" : "object-cover"}
                   />
                 </button>
@@ -85,7 +85,7 @@ export default function ProductView({ product }: { product: Product }) {
           </div>
 
           {/* Info */}
-          <div className="px-5 md:px-0 md:pr-8 lg:pr-12 py-8 md:py-12 md:sticky md:top-[110px] md:self-start">
+          <div className="px-5 md:px-0 md:pr-8 lg:pr-12 py-8 md:py-12 md:sticky md:top-[110px] md:self-start md:max-w-[820px]">
             <p className="label text-[10px] text-textdim mb-3">{product.categoryLabel}</p>
             <h1 className="display text-[clamp(24px,2.6vw,36px)] mb-3">{product.name}</h1>
             <div className="flex items-center gap-3 mb-4">
