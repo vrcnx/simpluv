@@ -19,14 +19,14 @@ export default function Footer() {
   return (
     <footer className="bg-white text-ink border-t border-rule">
       {/* Feature marquee */}
-      <div className="border-b border-rule overflow-hidden py-7">
+      <div className="border-b border-rule overflow-hidden py-5 md:py-7">
         <div className="flex w-max animate-marquee whitespace-nowrap">
           {[0, 1, 2, 3].map((k) => (
-            <div key={k} className="flex items-center gap-12 px-12" aria-hidden={k > 0}>
+            <div key={k} className="flex items-center gap-8 md:gap-12 px-8 md:px-12" aria-hidden={k > 0}>
               {features.map((f, i) => (
-                <div key={`${k}-${i}`} className="flex items-center gap-3.5 shrink-0">
+                <div key={`${k}-${i}`} className="flex items-center gap-3 md:gap-3.5 shrink-0">
                   <FeatureIcon name={f.icon} />
-                  <span className="text-[11.5px] font-bold tracking-[0.06em]">{f.label}</span>
+                  <span className="text-[10.5px] md:text-[11.5px] font-bold tracking-[0.06em]">{f.label}</span>
                 </div>
               ))}
             </div>
@@ -151,10 +151,11 @@ function FooterCol({
   links: { label: string; href: string }[];
   align: "left" | "right";
 }) {
+  const sideAlign = align === "right" ? "md:text-right" : "md:text-left";
   return (
-    <div className={align === "right" ? "md:text-right" : ""}>
-      <h5 className="display text-[15px] mb-5 text-center md:text-inherit">{title}</h5>
-      <ul className="space-y-2 text-center md:text-inherit">
+    <div className={`text-center ${sideAlign}`}>
+      <h5 className="display text-[15px] mb-5">{title}</h5>
+      <ul className="space-y-2.5">
         {links.map((l) => (
           <li key={l.label}>
             <Link

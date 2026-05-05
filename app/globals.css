@@ -43,12 +43,14 @@
     @apply bg-white text-ink antialiased;
     font-feature-settings: "kern", "liga";
     overflow-x: hidden;
-    /* Push first-page content below the fixed nav (logo 44 + menu 46 = 90) */
+    /* Mobile: only logo row exists (menu row hidden). Desktop: push by full nav. */
     padding-top: 44px;
   }
   /* On the home page, only push down by logo row so menu row floats over hero. */
   body.has-hero { padding-top: 44px; }
-  body:not(.has-hero) { padding-top: 90px; }
+  @media (min-width: 768px) {
+    body:not(.has-hero) { padding-top: 90px; }
+  }
 
   ::selection {
     @apply bg-ink text-white;

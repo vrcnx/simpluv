@@ -11,7 +11,7 @@ export default function PageHeader({ eyebrow, title, subtitle, banner }: Props) 
   if (banner) {
     return (
       <section className="relative w-full text-white">
-        <div className="relative aspect-[16/7] min-h-[320px] md:min-h-[420px] overflow-hidden grain">
+        <div className="relative aspect-[4/5] md:aspect-[16/7] min-h-[360px] md:min-h-[420px] overflow-hidden grain">
           <Image
             src={banner}
             alt={title}

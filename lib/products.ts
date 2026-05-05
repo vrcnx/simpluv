@@ -14,7 +14,8 @@ export interface Product {
   price: string;
   description: string;
   details: string[];
-  image: string;
+  image: string;       // flat lay product shot
+  modelImage?: string; // on-model editorial photo
   hero?: string;
 }
 
@@ -289,9 +290,10 @@ export const CATEGORIES: Record<Category, { label: string; copy: string; banner:
   },
 };
 
-// Resolve the per-slug image URL for each product.
+// Resolve the per-slug image URLs for each product.
 PRODUCTS.forEach((p) => {
   if (p.image === "__SLUG__") p.image = `/images/product-${p.slug}.png`;
+  if (!p.modelImage) p.modelImage = `/images/model-${p.slug}.png`;
 });
 
 export function productsByCategory(c: Category): Product[] {

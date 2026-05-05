@@ -7,13 +7,13 @@ import type { Product } from "@/lib/products";
 export default function ProductCard({ p }: { p: Product }) {
   return (
     <Link href={`/products/${p.slug}`} className="group block border-r border-rule last:border-r-0">
-      <div className="relative aspect-[4/5] bg-white overflow-hidden grain">
+      <div className="relative aspect-[4/5] bg-warm overflow-hidden grain">
         <Image
-          src={p.image}
+          src={p.modelImage || p.image}
           alt={p.name}
           fill
           sizes="(max-width: 768px) 50vw, 25vw"
-          className="object-contain p-[12%] transition-transform duration-500 ease-[cubic-bezier(.2,.6,.2,1)] group-hover:scale-[1.04]"
+          className="object-cover transition-transform duration-500 ease-[cubic-bezier(.2,.6,.2,1)] group-hover:scale-[1.04]"
         />
         <button
           aria-label="Add to wishlist"
