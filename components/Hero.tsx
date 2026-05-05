@@ -12,7 +12,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-right md:hidden"
+          className="object-cover object-center md:hidden"
         />
         {/* Desktop hero */}
         <Image
