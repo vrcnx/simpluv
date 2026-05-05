@@ -146,6 +146,107 @@ const POOL: Record<string, ProductReviews> = {
   },
 };
 
+// Expanded line
+POOL["sleeveless-polo-sky"] = {
+  rating: 4.9, total: 142,
+  breakdown: { five: 124, four: 14, three: 3, two: 1, one: 0 },
+  fit: { small: 6, trueToSize: 92, large: 2 },
+  reviews: [
+    { name: "Reese B.", initial: "R", date: "October 25, 2025", rating: 5, title: "The blue is gorgeous", body: "Sky blue is exactly as photographed — soft, not bright, very wearable. Same incredible feel as the white version. I have one in every color now.", size: "Small", height: "5'7\"", verified: true, fit: "True to Size" },
+    { name: "Hadley S.", initial: "H", date: "October 12, 2025", rating: 5, title: "My favorite color", body: "Pairs perfectly with white shorts and the white skort. Compliments every round.", size: "Small", verified: true, fit: "True to Size" },
+  ],
+};
+POOL["sleeveless-polo-black"] = {
+  rating: 4.9, total: 96,
+  breakdown: { five: 86, four: 8, three: 1, two: 1, one: 0 },
+  fit: { small: 4, trueToSize: 94, large: 2 },
+  reviews: [
+    { name: "Carrington W.", initial: "C", date: "October 19, 2025", rating: 5, title: "Sharp", body: "Black with the white piping is so striking. Reads as more elevated than your typical black polo. Holds its shape beautifully.", size: "Small", verified: true, fit: "True to Size" },
+    { name: "Phoebe L.", initial: "P", date: "September 30, 2025", rating: 5, title: "True black", body: "Genuinely black, not faded. The fabric quality is the same across colors. Worth it.", size: "Medium", verified: true, fit: "True to Size" },
+  ],
+};
+POOL["striped-short-sleeve-polo"] = {
+  rating: 4.7, total: 58,
+  breakdown: { five: 44, four: 11, three: 2, two: 1, one: 0 },
+  fit: { small: 4, trueToSize: 90, large: 6 },
+  reviews: [
+    { name: "Adelaide H.", initial: "A", date: "October 17, 2025", rating: 5, title: "Subtle stripe is perfect", body: "The stripe isn't loud — reads as elevated, not country-club kitsch. Such a thoughtful detail.", size: "Small", verified: true, fit: "True to Size" },
+    { name: "Tessa K.", initial: "T", date: "September 28, 2025", rating: 4, title: "Lovely", body: "Beautiful piece. The yarn-dye stripe holds up beautifully through washes.", size: "Medium", verified: true, fit: "Runs Large" },
+  ],
+};
+POOL["white-base"] = {
+  rating: 4.9, total: 184,
+  breakdown: { five: 162, four: 18, three: 3, two: 1, one: 0 },
+  fit: { small: 9, trueToSize: 88, large: 3 },
+  reviews: [
+    { name: "Imogen R.", initial: "I", date: "October 22, 2025", rating: 5, title: "Pristine layering piece", body: "White base is genuinely opaque under polos — no shadow-through. The fabric feels expensive.", size: "Small", verified: true, fit: "True to Size" },
+    { name: "Bea N.", initial: "B", date: "October 4, 2025", rating: 5, title: "Wear it under everything", body: "I bought one in white and one in black. Layers under every polo I own.", size: "X-Small", verified: true, fit: "True to Size" },
+  ],
+};
+POOL["quarter-zip-hoodie"] = {
+  rating: 4.9, total: 108,
+  breakdown: { five: 98, four: 8, three: 1, two: 1, one: 0 },
+  fit: { small: 5, trueToSize: 90, large: 5 },
+  reviews: [
+    { name: "Sloane V.", initial: "S", date: "October 20, 2025", rating: 5, title: "More polished than a hoodie", body: "Wears like a sweater but performs like a tech layer. The cream is gorgeous and the silver zip is so refined.", size: "Small", verified: true, fit: "True to Size" },
+    { name: "Frances M.", initial: "F", date: "October 1, 2025", rating: 5, title: "Best transitional layer", body: "From the back nine to dinner without changing. Holds shape, doesn't pill.", size: "Medium", verified: true, fit: "True to Size" },
+  ],
+};
+POOL["tennis-skirt"] = {
+  rating: 4.8, total: 132,
+  breakdown: { five: 110, four: 18, three: 3, two: 1, one: 0 },
+  fit: { small: 14, trueToSize: 82, large: 4 },
+  reviews: [
+    { name: "Lila T.", initial: "L", date: "October 23, 2025", rating: 5, title: "Length is perfect", body: "Mini tennis style without feeling too short. Built-in shorts stay put through every swing.", size: "Small", height: "5'6\"", verified: true, fit: "True to Size" },
+    { name: "Margaux P.", initial: "M", date: "October 6, 2025", rating: 5, title: "Crisp pleats", body: "Three knife pleats hold their press through the whole round. Looks fresh from the first tee to the 18th.", size: "X-Small", verified: true, fit: "True to Size" },
+  ],
+};
+POOL["bermuda-shorts"] = {
+  rating: 4.8, total: 67,
+  breakdown: { five: 55, four: 10, three: 1, two: 1, one: 0 },
+  fit: { small: 6, trueToSize: 90, large: 4 },
+  reviews: [
+    { name: "Genevieve A.", initial: "G", date: "October 18, 2025", rating: 5, title: "Knee-length is the move", body: "Modest enough for any club, polished pressed creases, slim fit. Everything I want from a bermuda.", size: "Small", verified: true, fit: "True to Size" },
+    { name: "Quinn O.", initial: "Q", date: "September 27, 2025", rating: 5, title: "Pristine", body: "9-inch is exactly right. Pressed creases hold beautifully. Will be my year-round bottom.", size: "Medium", verified: true, fit: "True to Size" },
+  ],
+};
+POOL["cropped-pant"] = {
+  rating: 4.8, total: 49,
+  breakdown: { five: 39, four: 8, three: 1, two: 1, one: 0 },
+  fit: { small: 3, trueToSize: 92, large: 5 },
+  reviews: [
+    { name: "Eleanor B.", initial: "E", date: "October 21, 2025", rating: 5, title: "Equally polished off the course", body: "Wore these to brunch after my round, no issues. Mid-calf taper is so flattering. Cream is a dream.", size: "Small", height: "5'5\"", verified: true, fit: "True to Size" },
+    { name: "Amelia C.", initial: "A", date: "October 2, 2025", rating: 4, title: "Chic", body: "Beautiful fit, taper is subtle and elevated. Loved through wear, would consider sizing down for a slimmer look.", size: "X-Small", verified: true, fit: "Runs Large" },
+  ],
+};
+POOL["knit-headband"] = {
+  rating: 4.9, total: 213,
+  breakdown: { five: 196, four: 13, three: 3, two: 1, one: 0 },
+  fit: { small: 0, trueToSize: 96, large: 4 },
+  reviews: [
+    { name: "Saoirse D.", initial: "S", date: "October 24, 2025", rating: 5, title: "Holds without pulling", body: "Sky blue is gorgeous, fabric is soft, doesn't squeeze my temples. Hair stays back through 18.", size: "OS", verified: true, fit: "True to Size" },
+    { name: "Naomi F.", initial: "N", date: "October 8, 2025", rating: 5, title: "My new favorite", body: "Replaced all my sweat headbands with two of these. The knit is just gorgeous.", size: "OS", verified: true, fit: "True to Size" },
+  ],
+};
+POOL["performance-belt"] = {
+  rating: 4.8, total: 87,
+  breakdown: { five: 73, four: 12, three: 1, two: 1, one: 0 },
+  fit: { small: 6, trueToSize: 90, large: 4 },
+  reviews: [
+    { name: "Iris W.", initial: "I", date: "October 16, 2025", rating: 5, title: "The buckle is everything", body: "Gold-tone buckle elevates the whole outfit. Slim 25mm width is perfect — doesn't bulk up the waistband.", size: "Small", verified: true, fit: "True to Size" },
+    { name: "Cleo R.", initial: "C", date: "September 26, 2025", rating: 4, title: "Sharp accessory", body: "Beautiful belt. I'd love to see it in black eventually.", size: "Medium", verified: true, fit: "True to Size" },
+  ],
+};
+POOL["leather-glove"] = {
+  rating: 4.9, total: 156,
+  breakdown: { five: 142, four: 11, three: 2, two: 1, one: 0 },
+  fit: { small: 8, trueToSize: 88, large: 4 },
+  reviews: [
+    { name: "Vienna J.", initial: "V", date: "October 22, 2025", rating: 5, title: "Broken-in feel from day one", body: "Soft cabretta, ventilated knuckles work, velcro is sticky and clean. Easily my favorite glove I've owned.", size: "Small", verified: true, fit: "True to Size" },
+    { name: "Lyra A.", initial: "L", date: "October 5, 2025", rating: 5, title: "Premium", body: "You can feel the leather quality. Will be ordering more.", size: "Medium", verified: true, fit: "True to Size" },
+  ],
+};
+
 export function reviewsForSlug(slug: string): ProductReviews {
   return (
     POOL[slug] ?? {
