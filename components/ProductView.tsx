@@ -46,17 +46,17 @@ export default function ProductView({ product }: { product: Product }) {
         </div>
       </section>
 
-      {/* Main — gallery 30% / info 70% on desktop, capped for ultrawide */}
+      {/* Main — gallery 40% / info 60% on desktop, capped for ultrawide */}
       <section className="bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-[30%_70%] gap-0 md:gap-10 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-0 md:gap-10 lg:gap-16">
           {/* Gallery */}
-          <div className="md:max-w-[560px] md:w-full">
+          <div className="md:max-w-[720px] md:w-full">
             <div className="relative aspect-[4/5] bg-warm grain overflow-hidden">
               <Image
                 src={gallery[activeImg]}
                 alt={product.name}
                 fill
-                sizes="(max-width: 768px) 100vw, 30vw"
+                sizes="(max-width: 768px) 100vw, 40vw"
                 priority
                 className="object-cover transition-opacity duration-300"
               />
