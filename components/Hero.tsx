@@ -11,7 +11,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-left md:object-center"
         />
         <div className="absolute inset-0 flex items-end z-10">
           <div className="w-full px-5 md:px-8 pb-10 md:pb-14">
