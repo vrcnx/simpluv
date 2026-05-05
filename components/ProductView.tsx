@@ -33,7 +33,7 @@ export default function ProductView({ product }: { product: Product }) {
     <>
       {/* Breadcrumb */}
       <section className="bg-white">
-        <div className="px-5 md:px-8 mx-auto max-w-[1440px] py-4">
+        <div className="px-5 md:px-8 py-4">
           <nav className="text-[11.5px] text-textdim flex items-center gap-2 overflow-x-auto" aria-label="Breadcrumb">
             <Link href="/" className="hover:opacity-65 shrink-0">Home</Link>
             <span className="shrink-0">/</span>
@@ -46,9 +46,9 @@ export default function ProductView({ product }: { product: Product }) {
         </div>
       </section>
 
-      {/* Main */}
+      {/* Main — full width */}
       <section className="bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-0 md:gap-12 px-0 md:px-8 max-w-[1440px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-0 md:gap-10 lg:gap-16">
           {/* Gallery */}
           <div>
             <div className="relative aspect-[4/5] bg-warm grain overflow-hidden">
@@ -85,7 +85,7 @@ export default function ProductView({ product }: { product: Product }) {
           </div>
 
           {/* Info */}
-          <div className="px-5 md:px-0 py-8 md:py-10 md:pr-2 md:sticky md:top-[56px] md:self-start">
+          <div className="px-5 md:px-0 md:pr-8 lg:pr-12 py-8 md:py-12 md:sticky md:top-[110px] md:self-start">
             <p className="label text-[10px] text-textdim mb-3">{product.categoryLabel}</p>
             <h1 className="display text-[clamp(24px,2.6vw,36px)] mb-3">{product.name}</h1>
             <div className="flex items-center gap-3 mb-4">
@@ -194,7 +194,7 @@ export default function ProductView({ product }: { product: Product }) {
 
       {/* You May Also Like */}
       <section className="py-[clamp(48px,6vw,80px)] bg-white border-t border-rule">
-        <div className="px-5 md:px-8 mx-auto max-w-[1440px] mb-8">
+        <div className="px-5 md:px-8 mb-8">
           <p className="label text-[10px] text-textdim mb-2">More to consider</p>
           <h3 className="display text-[clamp(22px,2.4vw,32px)]">You may also like</h3>
         </div>

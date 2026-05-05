@@ -32,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${instrument.variable} ${jura.variable}`}>
-      <body className="has-hero">
+      <body>
         <Nav />
         <main>{children}</main>
         <Footer />

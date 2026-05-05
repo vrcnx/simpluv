@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative bg-ink text-white">
+    <section className="relative bg-ink text-white lead-hero">
       <div className="relative h-[80vh] min-h-[520px] md:min-h-[640px] md:h-[88vh] w-full overflow-hidden grain">
         <Image
           src="/images/hero-editorial.png"

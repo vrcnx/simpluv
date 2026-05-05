@@ -43,13 +43,17 @@
     @apply bg-white text-ink antialiased;
     font-feature-settings: "kern", "liga";
     overflow-x: hidden;
-    /* Mobile: only logo row exists (menu row hidden). Desktop: push by full nav. */
+    /* Default: push content below the full nav (logo + menu) on desktop, just logo on mobile. */
     padding-top: 44px;
   }
-  /* On the home page, only push down by logo row so menu row floats over hero. */
-  body.has-hero { padding-top: 44px; }
   @media (min-width: 768px) {
-    body:not(.has-hero) { padding-top: 90px; }
+    body { padding-top: 90px; }
+  }
+  /* Pages that lead with a full-bleed hero pull it back under the menu row so the
+     transparent menu row floats over the hero image. */
+  .lead-hero { margin-top: -46px; }
+  @media (max-width: 767px) {
+    .lead-hero { margin-top: 0; }
   }
 
   ::selection {
