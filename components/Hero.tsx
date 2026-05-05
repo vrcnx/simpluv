@@ -5,13 +5,23 @@ export default function Hero() {
   return (
     <section className="relative bg-ink text-white lead-hero">
       <div className="relative h-[80vh] min-h-[520px] md:min-h-[640px] md:h-[88vh] w-full overflow-hidden grain">
+        {/* Mobile-specific hero */}
+        <Image
+          src="/images/hero-editorial-mobile.png"
+          alt="SIMPL UV editorial — performance golf apparel"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover md:hidden"
+        />
+        {/* Desktop hero */}
         <Image
           src="/images/hero-editorial.png"
           alt="SIMPL UV editorial — performance golf apparel"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-left md:object-center"
+          className="hidden md:block object-cover"
         />
         <div className="absolute inset-0 flex items-end z-10">
           <div className="w-full px-5 md:px-8 pb-10 md:pb-14">
