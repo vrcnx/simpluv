@@ -98,3 +98,86 @@
   }
   html { scroll-behavior: auto; }
 }
+
+/* ────────────────────────────────────────────────────────────
+ *  PRINT — Brand kit PDF export
+ *  Triggered via the Download button on /brand. Hides app chrome
+ *  (nav, footer, hero overlays, anything tagged .no-print), keeps
+ *  the brand page printable as a clean PDF.
+ * ──────────────────────────────────────────────────────────── */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 14mm;
+  }
+
+  html, body {
+    background: #fff !important;
+    color: #0A0A0A !important;
+    padding-top: 0 !important;
+  }
+
+  /* Force background colors / images to print on every browser. */
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Hide app chrome and any element opted out of printing. */
+  header,
+  footer,
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+
+  /* Cover page only appears in print. */
+  .print-only {
+    display: block !important;
+  }
+
+  /* Lighten the grain so it doesn't look like dirt on paper. */
+  :root {
+    --grain-opacity: 0.18;
+  }
+
+  /* Avoid breaking sections across pages where possible. */
+  section,
+  figure,
+  .pillar,
+  ul,
+  li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Force a fresh page before each major brand-kit section. */
+  .print-page-break {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* Tighten dynamic vw padding for a print page. */
+  body main > section {
+    padding-top: 16mm !important;
+    padding-bottom: 16mm !important;
+  }
+
+  /* Banner heroes scale down so they fit a single page. */
+  .lead-hero,
+  section .grain {
+    aspect-ratio: 16 / 9 !important;
+    min-height: 0 !important;
+  }
+
+  /* Links print without the underline ribbon mess. */
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}
+
+/* Cover page is hidden on screen by default; only renders in print. */
+.print-only { display: none; }
+

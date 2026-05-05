@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import ProductCard from "@/components/ProductCard";
+import ExportBrandKit from "@/components/ExportBrandKit";
 import { PRODUCTS } from "@/lib/products";
 
 export const metadata = { title: "Brand — SIMPL UV" };
@@ -54,12 +55,44 @@ const photography = [
 export default function Page() {
   return (
     <>
+      {/* Print-only cover page (visible only when exporting to PDF) */}
+      <section className="print-only" style={{ pageBreakAfter: "always", textAlign: "center", padding: "60mm 16mm" }}>
+        <Image
+          src="/logo/simpl-uv.svg"
+          alt="SIMPL UV"
+          width={300}
+          height={88}
+          style={{ filter: "brightness(0)", margin: "0 auto 32mm", height: "16mm", width: "auto" }}
+        />
+        <p style={{ fontSize: "11px", letterSpacing: "0.26em", textTransform: "uppercase", color: "#666", marginBottom: "12mm" }}>
+          Brand Guidelines  ·  2025
+        </p>
+        <h1 style={{ fontSize: "36px", fontWeight: 700, letterSpacing: "-0.02em", textTransform: "uppercase", marginBottom: "8mm" }}>
+          The SIMPL UV Brand
+        </h1>
+        <p style={{ fontSize: "14px", color: "#444", maxWidth: "60ch", margin: "0 auto", lineHeight: 1.6 }}>
+          Performance golf apparel built around UV protection, movement, and refined minimalism.
+          <br /><br />
+          <em>Nothing extra. Everything intentional.</em>
+        </p>
+      </section>
+
       <PageHeader
         eyebrow="The Brand"
         title="SIMPL UV"
         subtitle="Performance golf apparel built around UV protection, movement, and refined minimalism. Nothing extra. Everything intentional."
         banner="/images/brand-hero.png"
       />
+
+      {/* Floating PDF download — top of brand page, hidden in print */}
+      <div className="no-print bg-white border-b border-rule">
+        <div className="px-5 md:px-8 py-5 flex items-center justify-between gap-4">
+          <p className="text-[13px] text-textdim">
+            Save this page as a PDF for offline reference or sharing with partners.
+          </p>
+          <ExportBrandKit />
+        </div>
+      </div>
 
       {/* Mission */}
       <section className="py-[clamp(64px,8vw,120px)] bg-white">
@@ -89,7 +122,7 @@ export default function Page() {
       </section>
 
       {/* Logo */}
-      <section className="py-[clamp(48px,6vw,96px)] bg-white">
+      <section className="py-[clamp(48px,6vw,96px)] bg-white print-page-break">
         <div className="gutter mx-auto max-w-[1440px]">
           <p className="label text-textdim mb-8">Logo System</p>
           <div className="grid md:grid-cols-3 gap-2">
@@ -112,7 +145,7 @@ export default function Page() {
       </section>
 
       {/* Color */}
-      <section className="py-[clamp(48px,6vw,96px)] bg-white border-t border-rule">
+      <section className="py-[clamp(48px,6vw,96px)] bg-white border-t border-rule print-page-break">
         <div className="gutter mx-auto max-w-[1440px]">
           <p className="label text-textdim mb-8">Color System</p>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
@@ -132,7 +165,7 @@ export default function Page() {
       </section>
 
       {/* Voice */}
-      <section className="py-[clamp(48px,6vw,96px)] bg-warm">
+      <section className="py-[clamp(48px,6vw,96px)] bg-warm print-page-break">
         <div className="gutter mx-auto max-w-[1440px]">
           <p className="label text-textdim mb-8">Voice & Tone</p>
           <div className="grid md:grid-cols-2 gap-[clamp(32px,4vw,64px)]">
@@ -163,7 +196,7 @@ export default function Page() {
       </section>
 
       {/* Photography Gallery */}
-      <section className="py-[clamp(48px,6vw,96px)] bg-white">
+      <section className="py-[clamp(48px,6vw,96px)] bg-white print-page-break">
         <div className="gutter mx-auto max-w-[1440px] mb-10">
           <p className="label text-textdim mb-2">Photography</p>
           <h2 className="display text-[clamp(24px,3vw,40px)] mb-3">The Visual Library</h2>
@@ -191,7 +224,7 @@ export default function Page() {
       </section>
 
       {/* The Line — all products */}
-      <section className="py-[clamp(48px,6vw,96px)] bg-white border-t border-rule">
+      <section className="py-[clamp(48px,6vw,96px)] bg-white border-t border-rule print-page-break">
         <div className="gutter mx-auto max-w-[1440px] mb-10">
           <p className="label text-textdim mb-2">The Line</p>
           <h2 className="display text-[clamp(24px,3vw,40px)] mb-3">All Products</h2>
@@ -207,7 +240,7 @@ export default function Page() {
       </section>
 
       {/* Slogan */}
-      <section className="py-[clamp(64px,8vw,120px)] bg-ink text-white">
+      <section className="py-[clamp(64px,8vw,120px)] bg-ink text-white print-page-break">
         <div className="gutter mx-auto max-w-[1100px] text-center">
           <p className="label text-white/55 mb-6">Brand Slogan</p>
           <p className="display text-[clamp(24px,3.4vw,44px)] leading-[1.2]">
