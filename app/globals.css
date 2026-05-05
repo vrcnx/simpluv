@@ -108,13 +108,14 @@
 @media print {
   @page {
     size: A4 portrait;
-    margin: 14mm;
+    margin: 14mm 12mm;
   }
 
   html, body {
     background: #fff !important;
     color: #0A0A0A !important;
     padding-top: 0 !important;
+    font-size: 10pt;
   }
 
   /* Force background colors / images to print on every browser. */
@@ -137,9 +138,17 @@
     display: block !important;
   }
 
-  /* Lighten the grain so it doesn't look like dirt on paper. */
-  :root {
-    --grain-opacity: 0.18;
+  /* Strip the grain on print — it just looks like dirt on paper. */
+  :root { --grain-opacity: 0; }
+  .grain::after { display: none !important; }
+
+  /* All images render eagerly and at full crispness. */
+  img {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    image-rendering: -webkit-optimize-contrast;
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   /* Avoid breaking sections across pages where possible. */
@@ -147,9 +156,14 @@
   figure,
   .pillar,
   ul,
-  li {
+  li,
+  h1, h2, h3, h4 {
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+  h1, h2, h3, h4 {
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   /* Force a fresh page before each major brand-kit section. */
@@ -160,21 +174,59 @@
 
   /* Tighten dynamic vw padding for a print page. */
   body main > section {
-    padding-top: 16mm !important;
-    padding-bottom: 16mm !important;
+    padding-top: 12mm !important;
+    padding-bottom: 12mm !important;
   }
 
-  /* Banner heroes scale down so they fit a single page. */
-  .lead-hero,
-  section .grain {
-    aspect-ratio: 16 / 9 !important;
-    min-height: 0 !important;
+  /* Hero banners get a sane fixed height so they don't dominate a page. */
+  .lead-hero {
+    aspect-ratio: auto !important;
+    margin-top: 0 !important;
   }
+  .lead-hero > div {
+    aspect-ratio: 16 / 7 !important;
+    min-height: 0 !important;
+    max-height: 90mm;
+  }
+
+  /* Photo gallery on the brand page — keep tiles compact and uncluttered. */
+  section .grid img,
+  section figure img {
+    max-height: 70mm;
+    object-fit: cover;
+  }
+
+  /* Product card thumbs: compact in print, no hover transforms. */
+  a.group .relative {
+    max-height: 60mm;
+  }
+  a.group img {
+    transform: none !important;
+  }
+
+  /* Headings: print-friendly sizing. */
+  h1 { font-size: 26pt !important; }
+  h2 { font-size: 18pt !important; }
+  h3 { font-size: 14pt !important; }
+  h4 { font-size: 11pt !important; }
 
   /* Links print without the underline ribbon mess. */
   a {
     text-decoration: none !important;
     color: inherit !important;
+  }
+
+  /* Slogan section: keep text readable on dark bg. */
+  .bg-ink, .bg-navy {
+    background: #0A0A0A !important;
+    color: #fff !important;
+  }
+  .bg-ink * { color: #fff !important; }
+
+  /* No animations during print. */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }
 
