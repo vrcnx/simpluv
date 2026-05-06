@@ -8,7 +8,7 @@ import BrandStatement from "@/components/BrandStatement";
 
 export default function Home() {
   return (
-    <div className="space-y-8 md:space-y-12">
+    <div>
       <Hero />
       <CategoryHero />
       <FullBleedBanner

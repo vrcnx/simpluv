@@ -18,7 +18,7 @@ const items = [
 
 export default function TwoUpGrid() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-3 px-2 lg:px-3">
+    <section className="grid grid-cols-1 lg:grid-cols-2 gap-px">
       {items.map((it) => (
         <Link
           key={it.label}

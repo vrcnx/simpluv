@@ -10,8 +10,8 @@ const tiles = [
 
 export default function CategoryHero() {
   return (
-    <section className="bg-white px-2 md:px-3">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3">
+    <section className="bg-white">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-px">
         {tiles.map((t) => (
           <Link
             key={t.label}
