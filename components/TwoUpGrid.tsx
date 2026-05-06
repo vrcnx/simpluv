@@ -18,12 +18,12 @@ const items = [
 
 export default function TwoUpGrid() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 px-2 md:px-3">
+    <section className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-3 px-2 lg:px-3">
       {items.map((it) => (
         <Link
           key={it.label}
           href={it.href}
-          className="relative block aspect-[16/9] md:aspect-[5/4] overflow-hidden text-white grain"
+          className="relative block aspect-[16/9] md:aspect-[16/9] lg:aspect-[5/4] overflow-hidden text-white grain"
         >
           <Image
             src={it.src}

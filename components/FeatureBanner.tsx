@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function FeatureBanner() {
   return (
     <section className="relative w-full text-white bg-warm px-2 md:px-3">
-      <div className="relative aspect-[4/5] md:aspect-[16/9] min-h-[480px] md:min-h-[680px] overflow-hidden grain">
+      <div className="relative aspect-[4/5] md:aspect-[4/3] lg:aspect-[16/9] min-h-[480px] md:min-h-[560px] lg:min-h-[680px] overflow-hidden grain">
         <Image
           src="/images/banner-feature.png"
           alt="SIMPL-UV Technology"

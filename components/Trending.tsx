@@ -61,7 +61,7 @@ export default function Trending() {
           <Link
             key={p.slug}
             href={`/products/${p.slug}`}
-            className="snap-start shrink-0 w-1/2 md:w-[20%] border-r border-rule last:border-r-0 group"
+            className="snap-start shrink-0 w-1/2 md:w-1/3 lg:w-[20%] border-r border-rule last:border-r-0 group"
           >
             <div className="relative aspect-[4/5] bg-white overflow-hidden">
               <Image

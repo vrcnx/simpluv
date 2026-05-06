@@ -16,7 +16,7 @@ export default function FullBleedBanner({
 }: Props) {
   return (
     <section className={`relative w-full px-2 md:px-3 ${textColor === "white" ? "text-white" : "text-ink"}`}>
-      <div className="relative aspect-[5/6] md:aspect-[16/8] min-h-[420px] md:min-h-[540px] overflow-hidden grain">
+      <div className="relative aspect-[5/6] md:aspect-[3/2] lg:aspect-[16/8] min-h-[420px] md:min-h-[480px] lg:min-h-[540px] overflow-hidden grain">
         <Image
           src={src}
           alt={alt}

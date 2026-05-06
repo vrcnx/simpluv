@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative bg-ink text-white lead-hero">
-      <div className="relative h-[80vh] min-h-[520px] md:min-h-[640px] md:h-[88vh] w-full overflow-hidden grain">
+      <div className="relative h-[80vh] min-h-[520px] md:h-[78vh] md:min-h-[600px] lg:h-[88vh] lg:min-h-[640px] w-full overflow-hidden grain">
         {/* Mobile-specific hero */}
         <Image
           src="/images/hero-editorial-mobile.png"

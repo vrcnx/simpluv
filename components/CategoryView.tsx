@@ -28,7 +28,7 @@ export default function CategoryView({ category }: { category: Category }) {
       </section>
 
       <section className="bg-white">
-        <div className="grid grid-cols-2 md:grid-cols-4 border-y border-rule">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 border-y border-rule">
           {products.map((p) => (
             <ProductCard key={p.slug} p={p} />
           ))}

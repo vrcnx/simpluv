@@ -48,15 +48,15 @@ export default function ProductView({ product }: { product: Product }) {
 
       {/* Main — gallery 40% / info 60% on desktop, capped for ultrawide */}
       <section className="bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-0 md:gap-10 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-0 lg:gap-16">
           {/* Gallery */}
-          <div className="md:max-w-[720px] md:w-full">
+          <div className="lg:max-w-[720px] lg:w-full">
             <div className="relative aspect-[4/5] bg-warm grain overflow-hidden">
               <Image
                 src={gallery[activeImg]}
                 alt={product.name}
                 fill
-                sizes="(max-width: 768px) 100vw, 40vw"
+                sizes="(max-width: 1023px) 100vw, 40vw"
                 priority
                 className="object-cover transition-opacity duration-300"
               />
@@ -85,7 +85,7 @@ export default function ProductView({ product }: { product: Product }) {
           </div>
 
           {/* Info */}
-          <div className="px-5 md:px-0 md:pr-8 lg:pr-12 py-8 md:py-12 md:sticky md:top-[110px] md:self-start md:max-w-[820px]">
+          <div className="px-5 lg:px-0 lg:pr-12 py-8 lg:py-12 lg:sticky lg:top-[110px] lg:self-start lg:max-w-[820px]">
             <p className="label text-[10px] text-textdim mb-3">{product.categoryLabel}</p>
             <h1 className="display text-[clamp(24px,2.6vw,36px)] mb-3">{product.name}</h1>
             <div className="flex items-center gap-3 mb-4">
@@ -198,7 +198,7 @@ export default function ProductView({ product }: { product: Product }) {
           <p className="label text-[10px] text-textdim mb-2">More to consider</p>
           <h3 className="display text-[clamp(22px,2.4vw,32px)]">You may also like</h3>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 border-y border-rule">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 border-y border-rule">
           {recs.map((p) => (
             <ProductCard key={p.slug} p={p} />
           ))}

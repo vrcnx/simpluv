@@ -71,7 +71,7 @@ export default function Reviews({ data }: { data: ProductReviews }) {
   return (
     <section className="py-[clamp(56px,7vw,96px)] bg-white border-t border-rule">
       <div className="px-5 md:px-8">
-        <div className="grid md:grid-cols-[1fr_2fr] gap-[clamp(32px,5vw,80px)]">
+        <div className="grid lg:grid-cols-[1fr_2fr] gap-[clamp(32px,5vw,80px)]">
           {/* Summary */}
           <div>
             <p className="label text-[10px] text-textdim mb-3">Reviews</p>
